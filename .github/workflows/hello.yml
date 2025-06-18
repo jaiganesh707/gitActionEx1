@@ -14,7 +14,7 @@ jobs:
           echo '}' >> HelloWorld.java
 
       - name: Compile Java Program
-        run: javac Hello.java
+        run: javac HelloWorld.java
 
       - name: Run Java Program
         run: java HelloWorld
