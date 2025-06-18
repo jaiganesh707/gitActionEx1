@@ -5,5 +5,16 @@ jobs:
   hello:
     runs-on: ubuntu-latest
     steps:
-    - name: print hello word
-      run: System.out.prinln("Hello word")
+      - name: Create HelloWorld.java
+        run: |
+          echo 'public class HelloWorld {' > HelloWorld.java
+          echo '  public static void main(String[] args) {' >> HelloWorld.java
+          echo '    System.out.println("Hello World");' >> HelloWorld.java
+          echo '  }' >> HelloWorld.java
+          echo '}' >> HelloWorld.java
+
+      - name: Compile Java Program
+        run: javac Hello.java
+
+      - name: Run Java Program
+        run: java HelloWorld
