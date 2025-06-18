@@ -6,4 +6,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: print hello word
-      run: echo "Hello Word" 
+      run: System.out.prinln("Hello word")
